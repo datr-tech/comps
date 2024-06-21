@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "ES2019"
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}

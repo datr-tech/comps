@@ -1,0 +1,24 @@
+{
+  "name": "comps",
+  "description": "Retrieves company information per UK area",
+  "homepage": "https://github.com/datr-tech/comps",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "datr-tech",
+    "email": "admin@datr.tech",
+    "url": "https://github.com/datr-tech"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "npx webpack"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.2",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
