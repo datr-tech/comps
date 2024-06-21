@@ -13,9 +13,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "npx webpack"
+    "build": "npx webpack --mode production",
+    "clean": "npx rimraf ./dist/*"
   },
   "devDependencies": {
+    "rimraf": "^5.0.7",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.2",
     "webpack": "^5.92.1",

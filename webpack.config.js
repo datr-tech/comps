@@ -20,7 +20,8 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
-        filename: 'comps.js',
+        filename: 'datr_tech_comps.js',
         path: path.resolve(__dirname, 'dist'),
+        library: "datr_tech_comps",
     },
 };
