@@ -1,1 +1,7 @@
-export { getCompanies } from "./getCompanies";
+import { getCompanies } from "./getCompanies";
+
+function init() {
+  getCompanies();
+}
+
+init();
