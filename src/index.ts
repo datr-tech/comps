@@ -1,7 +1,2 @@
-import { getCompanies } from "./getCompanies";
-
-function init() {
-  getCompanies();
-}
-
-init();
+import 'dotenv/config';
+export { getCompanies } from "./companies";

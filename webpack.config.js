@@ -11,8 +11,7 @@ const webpackConfig = {
           options: {
             projectReferences: true,
           },
-        },
-        exclude: /node_modules/,
+        }
       },
     ],
   },
