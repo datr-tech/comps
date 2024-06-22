@@ -1,3 +1,3 @@
-export const getCompanies = ():void => {
+export const getCompanies = (): void => {
   console.log("GetCompanies");
-}
+};

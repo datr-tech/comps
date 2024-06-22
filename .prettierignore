@@ -1,0 +1,4 @@
+# Ignore dirs
+./.husky
+./dist
+./node_modules
