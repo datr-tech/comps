@@ -11,7 +11,7 @@ const webpackConfig = {
           options: {
             projectReferences: true,
           },
-        }
+        },
       },
     ],
   },

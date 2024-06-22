@@ -1,2 +1,2 @@
-import 'dotenv/config';
+import "dotenv/config";
 export { getCompanies } from "./companies";
