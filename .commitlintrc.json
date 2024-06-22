@@ -1,9 +1,4 @@
 {
-  "extends": [
-    "@commitlint/config-conventional"
-  ],
-  "rules": {
-    "references-empty": [2, "never"]
-  },
+  "extends": ["@commitlint/config-conventional"],
   "formatter": "@commitlint/format"
 }

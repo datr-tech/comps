@@ -2,33 +2,47 @@
   "name": "comps",
   "description": "Retrieves company information per UK area",
   "homepage": "https://github.com/datr-tech/comps",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "license": "MIT",
+  "keywords": [
+    "UK",
+    "Companies",
+    "SIC"
+  ],
   "author": {
     "name": "datr-tech",
-    "email": "admin@datr.tech",
-    "url": "https://github.com/datr-tech"
+    "email": "admin@datr.tech"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "npx webpack --mode production",
     "clean": "npx rimraf ./dist/*",
-    "commitlint": "commitlint --edit",
-    "prepare": "husky",
+    "commitlint": "npx commitlint --edit",
+    "format": "npx prettier --write ./",
+    "lint": "npx eslint ./src/**/*.ts",
+    "lint:fix": "npm run lint --fix",
+    "prepare": "npx husky",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "version": "npx auto-changelog -p && git add CHANGELOG.md"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.5.0",
     "auto-changelog": "^2.4.0",
+    "eslint": "^8.57.0",
+    "git-format-staged": "^3.1.1",
     "github-changelog": "^1.0.2",
     "husky": "^9.0.11",
+    "prettier": "3.3.2",
+    "prettier-eslint": "^16.3.0",
     "rimraf": "^5.0.7",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.2",
+    "typescript-eslint": "^7.13.1",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4"
   },
