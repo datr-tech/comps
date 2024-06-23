@@ -24,9 +24,7 @@ describe("main", () => {
            * Assert
            */
           expect(errorHandler).toThrow(assert.AssertionError);
-          expect(errorHandler).toThrow(
-            "main.helpers.getConfig: the 'baseApiUrl' param should not be an empty string.",
-          );
+          expect(errorHandler).toThrow("main.helpers.getConfig: the 'baseApiUrl' param should not be an empty string.");
         });
       });
     });

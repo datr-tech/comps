@@ -1,13 +1,7 @@
-import {
-  CONSTS_COMPANIES_API_BASE_URL,
-  CONSTS_COMPANIES_API_REST_METHOD_DEFAULT,
-} from "../../../../../src/consts";
+import { CONSTS_COMPANIES_API_BASE_URL, CONSTS_COMPANIES_API_REST_METHOD_DEFAULT } from "../../../../../src/consts";
 import { ApiRestMethodEnum } from "../../../../../src/consts";
 import { getConfig } from "../../../../../src";
-import {
-  IGetConfigInput,
-  IGetConfigOutput,
-} from "../../../../../src/interfaces";
+import { IGetConfigInput, IGetConfigOutput } from "../../../../../src/interfaces";
 
 describe("main", () => {
   describe("helpers", () => {
@@ -18,8 +12,7 @@ describe("main", () => {
            * Arrange
            */
           const apiKey: string = "TEST_API_KEY";
-          const apiRestMethod: ApiRestMethodEnum =
-            CONSTS_COMPANIES_API_REST_METHOD_DEFAULT;
+          const apiRestMethod: ApiRestMethodEnum = CONSTS_COMPANIES_API_REST_METHOD_DEFAULT;
           const baseApiUrl: string = CONSTS_COMPANIES_API_BASE_URL;
           const checkUrlValid: boolean = true;
           const searchArea: string = "TEST_SEARCH_AREA";
@@ -43,9 +36,7 @@ describe("main", () => {
            */
           expect(config.method).toEqual(apiRestMethod);
           expect(config.maxBodyLength).toEqual(Infinity);
-          expect(config.url).toEqual(
-            `${baseApiUrl}?location=${searchArea}&start_index=${startingIndex}`,
-          );
+          expect(config.url).toEqual(`${baseApiUrl}?location=${searchArea}&start_index=${startingIndex}`);
           expect(config.headers.Authorization).toEqual(apiKey);
         });
       });

@@ -22,9 +22,7 @@ describe("main", () => {
           /*
            * Assert
            */
-          expect(config.method).toContain(
-            CONSTS_COMPANIES_API_REST_METHOD_DEFAULT,
-          );
+          expect(config.method).toContain(CONSTS_COMPANIES_API_REST_METHOD_DEFAULT);
         });
       });
     });

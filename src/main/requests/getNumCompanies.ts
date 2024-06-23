@@ -1,9 +1,5 @@
 import axios from "axios";
-import {
-  IGetNumCompanies,
-  IGetNumCompaniesInput,
-  IGetNumCompaniesOutput,
-} from "../../interfaces";
+import { IGetNumCompanies, IGetNumCompaniesInput, IGetNumCompaniesOutput } from "../../interfaces";
 
 export const getNumCompanies: IGetNumCompanies = async ({
   config,

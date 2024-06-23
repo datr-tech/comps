@@ -4,11 +4,7 @@ import {
   CONSTS_COMPANIES_API_REST_METHOD_DEFAULT,
   CONSTS_COMPANIES_API_STARTING_INDEX_DEFAULT,
 } from "../../consts";
-import {
-  IGetConfig,
-  IGetConfigInput,
-  IGetConfigOutput,
-} from "../../interfaces";
+import { IGetConfig, IGetConfigInput, IGetConfigOutput } from "../../interfaces";
 
 /**
  *
@@ -38,21 +34,9 @@ export const getConfig: IGetConfig = ({
    * Assert that the values of the apiKey, baseApiUrl
    * and searchArea params are not equal to ""
    */
-  assert.notEqual(
-    apiKey,
-    "",
-    `${errorPrefix}: the 'apiKey' param should not be an empty string.`,
-  );
-  assert.notEqual(
-    baseApiUrl,
-    "",
-    `${errorPrefix}: the 'baseApiUrl' param should not be an empty string.`,
-  );
-  assert.notEqual(
-    searchArea,
-    "",
-    `${errorPrefix}: the 'searchArea' param should not be an empty string.`,
-  );
+  assert.notEqual(apiKey, "", `${errorPrefix}: the 'apiKey' param should not be an empty string.`);
+  assert.notEqual(baseApiUrl, "", `${errorPrefix}: the 'baseApiUrl' param should not be an empty string.`);
+  assert.notEqual(searchArea, "", `${errorPrefix}: the 'searchArea' param should not be an empty string.`);
 
   /*
    * If checkUrlValid is true, then ensure that the
@@ -63,9 +47,7 @@ export const getConfig: IGetConfig = ({
       new URL(baseApiUrl);
     } catch (error) {
       throw new assert.AssertionError({
-        message:
-          `${errorPrefix}: the value of the 'baseApiUrl' param is an invalid URL. ` +
-          error.message,
+        message: `${errorPrefix}: the value of the 'baseApiUrl' param is an invalid URL. ` + error.message,
       });
     }
   }
