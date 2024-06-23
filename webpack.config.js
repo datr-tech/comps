@@ -12,7 +12,6 @@ const webpackConfig = {
             projectReferences: true,
           },
         },
-        exclude: /node_modules/,
       },
     ],
   },
