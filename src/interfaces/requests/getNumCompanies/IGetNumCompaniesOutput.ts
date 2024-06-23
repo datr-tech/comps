@@ -1,0 +1,1 @@
+export type IGetNumCompaniesOutput = number;

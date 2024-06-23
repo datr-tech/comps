@@ -1,1 +1,1 @@
-export { getCompanies } from "./getCompanies";
+export { getCompaniesFromStartingIndex } from "../main/requests/getCompaniesFromStartingIndex";

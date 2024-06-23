@@ -1,2 +1,1 @@
-import "dotenv/config";
-export { getCompanies } from "./companies";
+export * from "./main";
