@@ -14,13 +14,18 @@ describe("main", () => {
           const apiKey: string = "TEST_API_KEY";
           const baseApiUrl: string = "TEST_INVALID_URL";
           const checkUrlValid: boolean = true;
-          const searchArea: string ="TEST_SEARCH_AREA";
+          const searchArea: string = "TEST_SEARCH_AREA";
 
           /*
            * Act
            */
           const errorHandler = () => {
-            const params: IGetConfigInput = { apiKey, baseApiUrl, checkUrlValid, searchArea };
+            const params: IGetConfigInput = {
+              apiKey,
+              baseApiUrl,
+              checkUrlValid,
+              searchArea,
+            };
             getConfig(params);
           };
 
@@ -28,9 +33,11 @@ describe("main", () => {
            * Assert
            */
           expect(errorHandler).toThrow(assert.AssertionError);
-          expect(errorHandler).toThrow("main.helpers.getConfig: the value of the 'baseApiUrl' param is an invalid URL.");
-        })
-      })
-    })
-  })
+          expect(errorHandler).toThrow(
+            "main.helpers.getConfig: the value of the 'baseApiUrl' param is an invalid URL.",
+          );
+        });
+      });
+    });
+  });
 });

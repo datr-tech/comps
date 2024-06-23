@@ -23,8 +23,8 @@ describe("main", () => {
            * Assert
            */
           expect(config.url).toContain(CONSTS_COMPANIES_API_BASE_URL);
-        })
-      })
-    })
-  })
+        });
+      });
+    });
+  });
 });

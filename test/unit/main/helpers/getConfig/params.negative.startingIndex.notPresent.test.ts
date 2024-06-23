@@ -24,8 +24,8 @@ describe("main", () => {
            * Assert
            */
           expect(config.url).toContain(expected);
-        })
-      })
-    })
-  })
+        });
+      });
+    });
+  });
 });

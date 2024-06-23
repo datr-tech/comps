@@ -4,14 +4,14 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   collectCoverageFrom: ["./src/**"],
   coverageThreshold: {
-    "global": {
-      "lines": 50
-    }
+    global: {
+      lines: 50,
+    },
   },
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
-  verbose: true
+  verbose: true,
 };
 
 export default config;

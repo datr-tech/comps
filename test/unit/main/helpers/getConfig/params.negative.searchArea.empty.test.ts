@@ -1,4 +1,4 @@
-import { strict as assert } from 'assert';
+import { strict as assert } from "assert";
 import { getConfig } from "../../../../../src";
 
 describe("main", () => {
@@ -17,15 +17,17 @@ describe("main", () => {
            */
           const errorHandler = () => {
             getConfig({ apiKey, searchArea });
-          }
+          };
 
           /*
            * Assert
            */
           expect(errorHandler).toThrow(assert.AssertionError);
-          expect(errorHandler).toThrow("main.helpers.getConfig: the 'searchArea' param should not be an empty string.");
-        })
-      })
-    })
-  })
+          expect(errorHandler).toThrow(
+            "main.helpers.getConfig: the 'searchArea' param should not be an empty string.",
+          );
+        });
+      });
+    });
+  });
 });

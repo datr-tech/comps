@@ -1,5 +1,5 @@
 import { IGetConfigOutput } from "../../helpers";
 
-export interface IGetCompaniesFromStartingIndexInput  {
+export interface IGetCompaniesFromStartingIndexInput {
   config: IGetConfigOutput;
 }

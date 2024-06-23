@@ -1,4 +1,4 @@
-import { strict as assert } from 'assert';
+import { strict as assert } from "assert";
 import { getConfig } from "../../../../../src";
 
 describe("main", () => {
@@ -9,7 +9,7 @@ describe("main", () => {
           /*
            * Arrange
            */
-          const apiKey: string= "TEST_API_KEY";
+          const apiKey: string = "TEST_API_KEY";
           const baseApiUrl: string = "";
           const searchArea: string = "TEST_SEARCH_AREA";
 
@@ -18,15 +18,17 @@ describe("main", () => {
            */
           const errorHandler = () => {
             getConfig({ apiKey, baseApiUrl, searchArea });
-          }
+          };
 
           /*
            * Assert
            */
           expect(errorHandler).toThrow(assert.AssertionError);
-          expect(errorHandler).toThrow("main.helpers.getConfig: the 'baseApiUrl' param should not be an empty string.");
-        })
-      })
-    })
-  })
+          expect(errorHandler).toThrow(
+            "main.helpers.getConfig: the 'baseApiUrl' param should not be an empty string.",
+          );
+        });
+      });
+    });
+  });
 });
