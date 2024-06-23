@@ -1,1 +1,1 @@
-export { getConfig } from "./getConfig";
+export { getCompaniesSearchConfig } from "./getCompaniesSearchConfig";

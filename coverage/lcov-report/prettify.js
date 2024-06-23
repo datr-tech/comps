@@ -474,13 +474,7 @@ window.PR_SHOULD_USE_CONTINUATION = true;
     );
     return g(W, S);
   }
-  var K = i({
-    keywords: A,
-    hashComments: true,
-    cStyleComments: true,
-    multiLineStrings: true,
-    regexLiterals: true,
-  });
+  var K = i({ keywords: A, hashComments: true, cStyleComments: true, multiLineStrings: true, regexLiterals: true });
   function Q(V, ag) {
     var U = /(?:^|\s)nocode(?:\s|$)/;
     var ab = /\r\n?|\n/;
@@ -715,45 +709,12 @@ window.PR_SHOULD_USE_CONTINUATION = true;
   c(g([], [[n, /^[\s\S]+/]]), ["uq.val"]);
   c(i({ keywords: l, hashComments: true, cStyleComments: true, types: e }), ["c", "cc", "cpp", "cxx", "cyc", "m"]);
   c(i({ keywords: "null,true,false" }), ["json"]);
-  c(
-    i({
-      keywords: R,
-      hashComments: true,
-      cStyleComments: true,
-      verbatimStrings: true,
-      types: e,
-    }),
-    ["cs"],
-  );
+  c(i({ keywords: R, hashComments: true, cStyleComments: true, verbatimStrings: true, types: e }), ["cs"]);
   c(i({ keywords: x, cStyleComments: true }), ["java"]);
   c(i({ keywords: H, hashComments: true, multiLineStrings: true }), ["bsh", "csh", "sh"]);
-  c(
-    i({
-      keywords: I,
-      hashComments: true,
-      multiLineStrings: true,
-      tripleQuotedStrings: true,
-    }),
-    ["cv", "py"],
-  );
-  c(
-    i({
-      keywords: s,
-      hashComments: true,
-      multiLineStrings: true,
-      regexLiterals: true,
-    }),
-    ["perl", "pl", "pm"],
-  );
-  c(
-    i({
-      keywords: f,
-      hashComments: true,
-      multiLineStrings: true,
-      regexLiterals: true,
-    }),
-    ["rb"],
-  );
+  c(i({ keywords: I, hashComments: true, multiLineStrings: true, tripleQuotedStrings: true }), ["cv", "py"]);
+  c(i({ keywords: s, hashComments: true, multiLineStrings: true, regexLiterals: true }), ["perl", "pl", "pm"]);
+  c(i({ keywords: f, hashComments: true, multiLineStrings: true, regexLiterals: true }), ["rb"]);
   c(i({ keywords: w, cStyleComments: true, regexLiterals: true }), ["js"]);
   c(
     i({

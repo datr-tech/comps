@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Code coverage report for src/main/helpers/getConfig.ts</title>
+    <title>Code coverage report for src/main/helpers/getCompaniesSearchConfig.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -17,12 +17,15 @@
   <body>
     <div class="wrapper">
       <div class="pad1">
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/main/helpers</a> getConfig.ts</h1>
+        <h1>
+          <a href="../../../index.html">All files</a> /
+          <a href="index.html">src/main/helpers</a> getCompaniesSearchConfig.ts
+        </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Statements</span>
-            <span class="fraction">23/23</span>
+            <span class="fraction">24/24</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -40,7 +43,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Lines</span>
-            <span class="fraction">18/18</span>
+            <span class="fraction">19/19</span>
           </div>
         </div>
         <p class="quiet">
@@ -117,7 +120,18 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">8x</span>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -138,6 +152,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">12x</span>
@@ -150,7 +165,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -158,6 +175,10 @@
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -171,6 +192,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,66 +200,80 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { strict as assert } from 'assert';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { strict as assert } from "assert";
 import {
-  CONSTS_COMPANIES_API_BASE_URL,
+  CONSTS_COMPANIES_API_COMPANIES_SEARCH_URL,
   CONSTS_COMPANIES_API_REST_METHOD_DEFAULT,
-  CONSTS_COMPANIES_API_STARTING_INDEX_DEFAULT
+  CONSTS_COMPANIES_API_STARTING_INDEX_DEFAULT,
 } from "../../consts";
-import {
-  IGetConfig,
-  IGetConfigInput,
-  IGetConfigOutput
-} from "../../interfaces";
+import { IGetRequestConfig, IGetRequestConfigInput, IGetCompaniesSearchConfigOutput } from "../../interfaces";
 &nbsp;
 /**
+ * Generate the config to be used to call the API.
  *
- * @param apiKey
- * @param searchArea
- * @param apiRestMethod
- * @param baseApiUrl
- * @param startingIndex
- * @param checkUrlValid
+ * @param {IGetRequestConfigInput} params
+ * @param {string} params.apiKey
+ * @param {string} params.searchArea
+ * @param {ApiRestMethodEnum} params.apiRestMethod
+ * @param {number} params.startingIndex
+ * @param {string} params.url
+ * @param {boolean} params.checkUrlValid
+ * @return {IGetCompaniesSearchConfigOutput}
+ * @example
+ *  const config = getConfig({ apiKey, searchArea });
  */
-export const getConfig: IGetConfig = ({
+export const getConfig: IGetRequestConfig = ({
   apiKey,
   searchArea,
   apiRestMethod = CONSTS_COMPANIES_API_REST_METHOD_DEFAULT,
-  baseApiUrl = CONSTS_COMPANIES_API_BASE_URL,
   startingIndex = CONSTS_COMPANIES_API_STARTING_INDEX_DEFAULT,
-  checkUrlValid = false
-}: IGetConfigInput): IGetConfigOutput =&gt; {
-&nbsp;
+  url = CONSTS_COMPANIES_API_COMPANIES_SEARCH_URL,
+  checkUrlValid = false,
+}: IGetRequestConfigInput): IGetCompaniesSearchConfigOutput =&gt; {
   /*
-   *
+   * Define a string variable that will be used as a prefix for
+   * each thrown error message. The string will uniquely define the
+   * 'location' of the current code module, aiding debugging.
    */
   const errorPrefix: string = "main.helpers.getConfig";
 &nbsp;
   /*
-   *
+   * Assert that the values of the apiKey, url
+   * and searchArea params are not equal to ""
    */
   assert.notEqual(apiKey, "", `${errorPrefix}: the 'apiKey' param should not be an empty string.`);
-  assert.notEqual(baseApiUrl, "", `${errorPrefix}: the 'baseApiUrl' param should not be an empty string.`);
   assert.notEqual(searchArea, "", `${errorPrefix}: the 'searchArea' param should not be an empty string.`);
+  assert.notEqual(url, "", `${errorPrefix}: the 'url' param should not be an empty string.`);
 &nbsp;
+  /*
+   * If checkUrlValid is true, then ensure that the
+   * value of the baseApiUrl param is a valid URL.
+   */
   if (checkUrlValid) {
     try {
-      new URL(baseApiUrl);
-    } catch(error) {
+      new URL(url);
+    } catch (error) {
       throw new assert.AssertionError({
-        message: `${errorPrefix}: the value of the 'baseApiUrl' param is an invalid URL. ` + error.message,
+        message: `${errorPrefix}: the value of the 'url' param is an invalid URL. ` + error.message,
       });
     }
   }
 &nbsp;
+  const urlParams: string = `location=${searchArea}&amp;start_index=${startingIndex}`;
+&nbsp;
   return {
-    method: apiRestMethod,
-    maxBodyLength: Infinity,
-    url: `${baseApiUrl}?location=${searchArea}&amp;start_index=${startingIndex}`,
     headers: {
       Authorization: `${apiKey}`,
-    }
-  } as IGetConfigOutput;
+    },
+    method: apiRestMethod,
+    maxBodyLength: Infinity,
+    url,
+    urlParams,
+    urlWithParams: `${url}?${urlParams}`
+  } as IGetCompaniesSearchConfigOutput;
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -248,7 +284,7 @@ export const getConfig: IGetConfig = ({
     <div class="footer quiet pad2 space-top1 center small">
       Code coverage generated by
       <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-      at 2024-06-23T01:31:58.704Z
+      at 2024-06-23T07:52:34.527Z
     </div>
     <script src="../../../prettify.js"></script>
     <script>

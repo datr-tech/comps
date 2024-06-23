@@ -1,2 +1,3 @@
-export * from "./getCompaniesFromStartingIndex";
+export * from "./common";
+export * from "./getCompaniesFromStartIndex";
 export * from "./getNumCompanies";
