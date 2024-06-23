@@ -8,7 +8,7 @@ export type IGetCompaniesSearchConfigOutput = {
   method: string;
   maxBodyLength: typeof Infinity;
   params: IGetCompaniesSearchConfigOutputParams;
-  responseEncoding: string,
-  responseType: ResponseType,
+  responseEncoding: string;
+  responseType: ResponseType;
   url: string;
 };

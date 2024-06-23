@@ -9,7 +9,7 @@ describe("main", (): void => {
           /*
            * Arrange
            */
-          const apiKey: string= "TEST_API_KEY";
+          const apiKey: string = "TEST_API_KEY";
           const searchArea: string = "TEST_SEARCH_AREA";
           const startIndexExpected: number = 1;
 

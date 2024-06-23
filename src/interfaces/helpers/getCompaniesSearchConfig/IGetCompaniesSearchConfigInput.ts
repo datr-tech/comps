@@ -1,8 +1,5 @@
 import { ResponseType } from "axios";
-import {
-  ApiResponseEncodingEnum,
-  ApiRestMethodEnum
-} from "../../../config";
+import { ApiResponseEncodingEnum, ApiRestMethodEnum } from "../../../config";
 
 export interface IGetCompaniesSearchConfigInput {
   apiKey: string;

@@ -1,10 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import {
-  ICompanies,
-  IGetNumCompanies,
-  IGetNumCompaniesInput,
-  IGetNumCompaniesOutput
-} from "../../interfaces";
+import { ICompanies, IGetNumCompanies, IGetNumCompaniesInput, IGetNumCompaniesOutput } from "../../interfaces";
 
 /**
  * Retrieve the number of companies per search config.
@@ -16,7 +11,9 @@ import {
  *  const config = getCompaniesSearchConfig( ... );
  *  const numCompanies = await getNumCompanies({ config });
  */
-export const getNumCompanies: IGetNumCompanies = async ({ config }: IGetNumCompaniesInput): Promise<IGetNumCompaniesOutput> => {
+export const getNumCompanies: IGetNumCompanies = async ({
+  config,
+}: IGetNumCompaniesInput): Promise<IGetNumCompaniesOutput> => {
   /*
    * Define a string variable that will be used as a prefix for
    * each thrown error message. The string will uniquely define the
@@ -30,7 +27,6 @@ export const getNumCompanies: IGetNumCompanies = async ({ config }: IGetNumCompa
   return await axios
     .request(config)
     .then((response: AxiosResponse) => {
-
       /*
        * Only progress when response.data is not undefined.
        */
@@ -47,7 +43,6 @@ export const getNumCompanies: IGetNumCompanies = async ({ config }: IGetNumCompa
         throw new Error("Undefined response.data.hits");
       }
       return companies.hits;
-
     })
     .catch((error) => {
       const errorMessage: string = `${errorPrefix}: ${error.message}`;

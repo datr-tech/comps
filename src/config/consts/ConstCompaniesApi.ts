@@ -1,8 +1,5 @@
 import { ResponseType } from "axios";
-import {
-  ApiResponseEncodingEnum,
-  ApiRestMethodEnum
-} from "../enums";
+import { ApiResponseEncodingEnum, ApiRestMethodEnum } from "../enums";
 
 export const CONST_COMPANIES_API_BASE_URL: string = "https://api.company-information.service.gov.uk/advanced-search";
 export const CONST_COMPANIES_API_SEARCH_URL: string = `${CONST_COMPANIES_API_BASE_URL}/companies`;

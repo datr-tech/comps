@@ -12,7 +12,7 @@ describe("main", (): void => {
            */
           const apiKey: string = "TEST_API_KEY";
           const searchArea: string = "TEST_SEARCH_AREA";
-          const methodExpected: ApiRestMethodEnum = ApiRestMethodEnum.GET
+          const methodExpected: ApiRestMethodEnum = ApiRestMethodEnum.GET;
 
           /*
            * Act

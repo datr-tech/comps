@@ -6,16 +6,15 @@ import { configParams, resourceWithParams, urlBase } from "../../../../mocks/moc
 describe("main", (): void => {
   describe("requests", (): void => {
     describe("getCompaniesFromStartIndex", (): void => {
-      describe("negative.response.data.items.undefined", (): void=> {
-        it("should throw the expected error when response.data.items is undefined", async(): Promise<void> => {
+      describe("negative.response.data.items.undefined", (): void => {
+        it("should throw the expected error when response.data.items is undefined", async (): Promise<void> => {
           /*
            * Arrange
            */
           const config: IGetCompaniesSearchConfigOutput = getCompaniesSearchConfig(configParams);
-          const expectedErrorMessageFragment: string = "main.requests.getCompaniesFromStartIndex: Undefined response.data.items"
-          nock(urlBase)
-            .get(resourceWithParams)
-            .reply(200, {});
+          const expectedErrorMessageFragment: string =
+            "main.requests.getCompaniesFromStartIndex: Undefined response.data.items";
+          nock(urlBase).get(resourceWithParams).reply(200, {});
 
           /*
            * Act

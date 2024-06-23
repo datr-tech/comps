@@ -6,16 +6,14 @@ import { configParams, resourceWithParams, urlBase } from "../../../../mocks/moc
 describe("main", (): void => {
   describe("requests", (): void => {
     describe("getNumCompanies", (): void => {
-      describe("negative.response.status.invalid", (): void=> {
-        it("should throw the expected error when an HTTP 400 status is returned", async(): Promise<void> => {
+      describe("negative.response.status.invalid", (): void => {
+        it("should throw the expected error when an HTTP 400 status is returned", async (): Promise<void> => {
           /*
            * Arrange
            */
           const config: IGetCompaniesSearchConfigOutput = getCompaniesSearchConfig(configParams);
-          const expectedErrorMessageFragment: string = "main.requests.getNumCompanies"
-          nock(urlBase)
-            .get(resourceWithParams)
-            .reply(400);
+          const expectedErrorMessageFragment: string = "main.requests.getNumCompanies";
+          nock(urlBase).get(resourceWithParams).reply(400);
 
           /*
            * Act

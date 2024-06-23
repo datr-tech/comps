@@ -11,7 +11,8 @@ describe("main", (): void => {
            */
           const apiKey: string = "";
           const searchArea: string = "TEST_SEARCH_AREA";
-          const expectedErrorMessage: string = "main.helpers.getCompaniesSearchConfig: the 'apiKey' param should not be an empty string.";
+          const expectedErrorMessage: string =
+            "main.helpers.getCompaniesSearchConfig: the 'apiKey' param should not be an empty string.";
 
           /*
            * Act

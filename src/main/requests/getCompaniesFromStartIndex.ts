@@ -3,7 +3,7 @@ import {
   ICompanies,
   IGetCompaniesFromStartIndex,
   IGetCompaniesFromStartIndexInput,
-  IGetCompaniesFromStartIndexOutput
+  IGetCompaniesFromStartIndexOutput,
 } from "../../interfaces";
 
 /**
@@ -14,7 +14,7 @@ import {
  * @return {Promise<IGetCompaniesFromStartIndexOutput>}
  */
 export const getCompaniesFromStartIndex: IGetCompaniesFromStartIndex = async ({
-  config
+  config,
 }: IGetCompaniesFromStartIndexInput): Promise<IGetCompaniesFromStartIndexOutput> => {
   /*
    * Define a string variable that will be used as a prefix for
@@ -29,7 +29,6 @@ export const getCompaniesFromStartIndex: IGetCompaniesFromStartIndex = async ({
   return await axios
     .request(config)
     .then((response: AxiosResponse) => {
-
       /*
        * Only progress when response.data is not undefined.
        */
@@ -53,7 +52,6 @@ export const getCompaniesFromStartIndex: IGetCompaniesFromStartIndex = async ({
         throw new Error("Response.data.items is not an array");
       }
       return data.items;
-
     })
     .catch((error) => {
       const errorMessage: string = `${errorPrefix}: ${error.message}`;

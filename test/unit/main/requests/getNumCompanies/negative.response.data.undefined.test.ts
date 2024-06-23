@@ -6,16 +6,14 @@ import { configParams, resourceWithParams, urlBase } from "../../../../mocks/moc
 describe("main", (): void => {
   describe("requests", (): void => {
     describe("getNumCompanies", (): void => {
-      describe("negative.response.data.undefined", (): void=> {
-        it("should throw the expected error when response.data is undefined", async(): Promise<void> => {
+      describe("negative.response.data.undefined", (): void => {
+        it("should throw the expected error when response.data is undefined", async (): Promise<void> => {
           /*
            * Arrange
            */
           const config: IGetCompaniesSearchConfigOutput = getCompaniesSearchConfig(configParams);
-          const expectedErrorMessageFragment: string = "main.requests.getNumCompanies: Undefined response.data"
-          nock(urlBase)
-            .get(resourceWithParams)
-            .reply(200);
+          const expectedErrorMessageFragment: string = "main.requests.getNumCompanies: Undefined response.data";
+          nock(urlBase).get(resourceWithParams).reply(200);
 
           /*
            * Act

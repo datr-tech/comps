@@ -4,13 +4,13 @@ import {
   CONST_COMPANIES_API_RESPONSE_ENCODING_DEFAULT,
   CONST_COMPANIES_API_RESPONSE_TYPE_DEFAULT,
   CONST_COMPANIES_API_REST_METHOD_DEFAULT,
-  CONST_COMPANIES_API_START_INDEX_DEFAULT
+  CONST_COMPANIES_API_START_INDEX_DEFAULT,
 } from "../../config";
 import {
   IGetCompaniesSearchConfig,
   IGetCompaniesSearchConfigInput,
   IGetCompaniesSearchConfigOutput,
-  IGetCompaniesSearchConfigOutputParams
+  IGetCompaniesSearchConfigOutputParams,
 } from "../../interfaces";
 
 /**
@@ -80,6 +80,6 @@ export const getCompaniesSearchConfig: IGetCompaniesSearchConfig = ({
     params,
     responseEncoding: apiResponseEncoding.toString(),
     responseType: apiResponseType,
-    url: url
+    url: url,
   };
 };

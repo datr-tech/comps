@@ -1,12 +1,7 @@
 import { ResponseType } from "axios";
-import {
-  ApiResponseEncodingEnum,
-  ApiRestMethodEnum } from "../../../../../src/config";
+import { ApiResponseEncodingEnum, ApiRestMethodEnum } from "../../../../../src/config";
 import { getCompaniesSearchConfig } from "../../../../../src";
-import {
-  IGetCompaniesSearchConfigInput,
-  IGetCompaniesSearchConfigOutput
-} from "../../../../../src/interfaces";
+import { IGetCompaniesSearchConfigInput, IGetCompaniesSearchConfigOutput } from "../../../../../src/interfaces";
 
 describe("main", (): void => {
   describe("helpers", (): void => {
@@ -36,7 +31,7 @@ describe("main", (): void => {
             checkUrlValid,
             searchArea,
             startIndex,
-            url
+            url,
           };
           const config: IGetCompaniesSearchConfigOutput = getCompaniesSearchConfig(params);
 

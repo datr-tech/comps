@@ -14,7 +14,8 @@ describe("main", (): void => {
           const url: string = "TEST_INVALID_URL";
           const checkUrlValid: boolean = true;
           const searchArea: string = "TEST_SEARCH_AREA";
-          const expectedErrorMessage: string = "main.helpers.getCompaniesSearchConfig: the value of the 'url' param is an invalid URL.";
+          const expectedErrorMessage: string =
+            "main.helpers.getCompaniesSearchConfig: the value of the 'url' param is an invalid URL.";
 
           /*
            * Act
