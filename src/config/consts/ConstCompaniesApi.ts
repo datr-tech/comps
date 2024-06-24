@@ -7,3 +7,4 @@ export const CONST_COMPANIES_API_RESPONSE_ENCODING_DEFAULT: ApiResponseEncodingE
 export const CONST_COMPANIES_API_RESPONSE_TYPE_DEFAULT: ResponseType = "json";
 export const CONST_COMPANIES_API_REST_METHOD_DEFAULT: ApiRestMethodEnum = ApiRestMethodEnum.GET;
 export const CONST_COMPANIES_API_START_INDEX_DEFAULT: number = 1;
+export const CONST_COMPANIES_API_INDEX_STEP: number = 20;
